@@ -5,7 +5,7 @@ var Blynk = require('blynk-library');
 var request = require('request');
 var AUTH = 'your auth code goes here';
 var blynk = new Blynk.Blynk(AUTH);
-var v10 = new blynk.VirtualPin(10);
+//var v10 = new blynk.VirtualPin(10);
 //this is used to monitor the listed equipment  ie below url: shows equipment/1' is for equipment 1
 var equipment1opt = {
     url: 'http://127.0.0.1:80/api/equipments/1',
@@ -15,19 +15,19 @@ var equipment1opt = {
     }
 };
 
-function equipment1call(error, response, body) {
+function equipment1call(error, response, equip1) {
     if (!error && response.statusCode == 200) {
-       var thingy = body.slice(47,51);
+       var equip1stat = equip1body.slice(47,51);
 	
       // console.log(body.slice(47,51));
       // console.log(body);
     }
-    if (thingy == 'true') {
+    if (equip1stat == 'true') {
 	//console.log('GPIO26 OFF');
 	//blynk.virtualWrite(10, 255);    // V23 Widget (Green) LED off
 	blynk.virtualWrite(14, 'Main Pump On');
 }
-    else if(thingy == 'fals') {
+    else if(equip1stat == 'fals') {
        // console.log('its on');
 	//blynk.virtualWrite(10, 0);
 	blynk.virtualWrite(14, 'Main Pump Off');
