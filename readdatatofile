@@ -33,7 +33,7 @@ request(options, callback);
  //      console.log("Successful Write to ");
 //     }
 //});
-fs.appendFile('test.txt', a, function(error) {
+fs.appendFile('test.txt', body, function(error) {
      if (error) {
        console.error("write error:  " + error.message);
      } else {
