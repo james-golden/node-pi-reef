@@ -79,11 +79,38 @@ function equip3call(error, response, equip3) {
 //	console.log(equip3);
 //	console.log(equip3stat);
 }
-	if (equip3 == 'true') {
+	if (tf(equip3 == 'true')) {
 	   //blynk.virtualWrite(11, 255);
 	   blynk.virtualWrite(16, 'Heater On');
 	}
 	else if (tf(equip3 == 'false')) {
+	  // blynk.virtualWrite(11, 0);
+	   blynk.virtualWrite(15, 'Heater Off');
+	}
+}
+// end of equipment 3
+
+// begin of equipment 4
+
+var equip4opt = {
+	url: 'http://127.0.0.1:80/api/equipments/5',
+	auth: {
+		'user': 'reef-pi',
+		'pass': 'reef-pi'
+	}
+};
+
+function equip4call(error, response, equip4) {
+	if(!error && response.statusCode == 200) {
+//	var equip3stat = equip3.slice(48,51);
+//	console.log(equip3);
+//	console.log(equip3stat);
+}
+	if (tf(equip4 == 'true')) {
+	   //blynk.virtualWrite(11, 255);
+	   blynk.virtualWrite(16, 'Heater On');
+	}
+	else if (tf(equip4 == 'false')) {
 	  // blynk.virtualWrite(11, 0);
 	   blynk.virtualWrite(15, 'Heater Off');
 	}
@@ -116,5 +143,6 @@ function() {
 	request(tempature, tempcall);
 	request(equipment1opt, equipment1call);
 	request(equip2opt, equip2call)
-	request(equip3opt, equip3call).end();
+	request(equip3opt, equip3call)
+	request(equip4opt, equip4call).end();
 }, 2000);
