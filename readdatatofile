@@ -1,0 +1,12 @@
+//     /my-awesome-project/node-pi-reef
+
+var writeFile = require('write');
+writeFile('foo.txt', 'This is content...', function(err) {
+  if (err) console.log(err);
+});
+ 
+// promise
+writeFile('foo.txt', 'This is contenttoo...')
+  .then(function() {
+    // do stuff
+  });
