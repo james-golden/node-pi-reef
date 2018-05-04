@@ -4,7 +4,7 @@ var writeFile = require('write');
 var a = 'what';
 var b = 'is';
 var c = 'this';
-//writeFile('foo.txt', 'This is content...', function(err) {
+//writeFile('foo.txt', a,b,c, function(err) {
 //  if (err) console.log(err);
 //});
  
