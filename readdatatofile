@@ -1,15 +1,17 @@
 //     /my-awesome-project/node-pi-reef
 
-var writeFile = require('write');
-var a = 'what';
-var b = 'is';
-var c = 'this';
-//writeFile('foo.txt', a,b,c, function(err) {
-//  if (err) console.log(err);
-//});
- 
-// promise
-writeFile('foo.txt', 'a, b, c')
-  .then(function() {
-    // do stuff
-  });
+const fs = require('fs');
+var a = "this";
+var b = "is";
+var c = 'a';
+var d = "test";
+
+
+fs.appendFile('foo.txt', a, b, c, d, (err) => {  
+    // throws an error, you could also catch it here
+    if (err) throw err;
+
+    // success case, the file was saved
+    console.log('Lyric saved!');
+});
+
