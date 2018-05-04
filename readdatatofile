@@ -20,7 +20,7 @@ var fs = require("fs");
 //var path = "c:\\Temp\\Test.txt";
 var data = "Hello from the Node writeFile method!";
 
-fs.writeFile(test.txt, data, function(error) {
+fs.writeFile('test.txt', data, function(error) {
      if (error) {
        console.error("write error:  " + error.message);
      } else {
