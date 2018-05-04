@@ -133,7 +133,7 @@ function tempcall(error, response, tempbody) {
     if (!error && response.statusCode == 200) {
 // This was a pain.  this sets where it reads from.  As long as the temp is XX.XX then it will work.  If is XX then it will read the wrong stuff and error 
        var begin = tempbody.length - 8;
-        var end = tempbody.length - 5;      //changed from 3 to 5 to get rid of decimal point for now
+        var end = tempbody.length - 3;      
 	var currtemp = tempbody.slice(begin, end);
 	var currtemp = parseFloat(currtemp);
 	blynk.virtualWrite(12, currtemp);
