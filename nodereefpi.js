@@ -3,7 +3,7 @@
 var Blynk = require('blynk-library');
 var tf = require('string-includes');
 var request = require('request');
-var AUTH = '559888bce2724c079b9d617cffbd8518;
+var AUTH = '559888bce2724c079b9d617cffbd8518';
 var blynk = new Blynk.Blynk(AUTH);
 var v10 = new blynk.VirtualPin(10);
 //this is used to monitor the listed equipment  ie below url: shows equipment/1' is for equipment 1
