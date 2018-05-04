@@ -13,10 +13,10 @@ var options = {
 function callback(error, response, body) {
     if (!error && response.statusCode == 200) {
         console.log(body);
-    if body.stringIncludes('true') {
+    if stringIncludes(body, 'true') {
         console.log("it is on at the moment);
         }
-    if body.stringIncludes('false') {
+    if stringIncludes(body, 'false') {
         console.log("it is off at the moment);
         }
     }
