@@ -22,12 +22,12 @@ function equipment1call(error, response, equip1) {
       // console.log(body.slice(47,51));
       // console.log(body);
     }
-    if (tf(equip1 == 'true')) {
+    if (tf(equip1 == "true")) {
 	//console.log('GPIO26 OFF');
 	//blynk.virtualWrite(10, 255);    // V23 Widget (Green) LED off
 	blynk.virtualWrite(14, 'Main Pump On');
 }
-    else if (tf(equip1 == 'false')) {
+    else if (tf(equip1 == "false")) {
        // console.log('its on');
 	//blynk.virtualWrite(10, 0);
 	blynk.virtualWrite(14, 'Main Pump Off');
@@ -52,11 +52,11 @@ function equip2call(error, response, equip2) {
 //	console.log(equip2);
 //	console.log(equip2stat);
 }
-	if (tf(equip2 == 'true')) {
+	if (tf(equip2 == "true")) {
 	  // blynk.virtualWrite(11, 255);
 	   blynk.virtualWrite(15, 'Wave Maker On');
 	}
-	else if (tf(equip2 == 'false')) {
+	else if (tf(equip2 == "false")) {
 	  // blynk.virtualWrite(11, 0);
 	   blynk.virtualWrite(15, 'Wave Maker Off');
 	}
@@ -79,11 +79,11 @@ function equip3call(error, response, equip3) {
 //	console.log(equip3);
 //	console.log(equip3stat);
 }
-	if (tf(equip3 == 'true')) {
+	if (tf(equip3 == "true")) {
 	   //blynk.virtualWrite(11, 255);
 	   blynk.virtualWrite(16, 'Heater On');
 	}
-	else if (tf(equip3 == 'false')) {
+	else if (tf(equip3 == "false")) {
 	  // blynk.virtualWrite(11, 0);
 	   blynk.virtualWrite(15, 'Heater Off');
 	}
@@ -106,11 +106,11 @@ function equip4call(error, response, equip4) {
 //	console.log(equip3);
 //	console.log(equip3stat);
 }
-	if (tf(equip4 == 'true')) {
+	if (tf(equip4 == "true")) {
 	   //blynk.virtualWrite(11, 255);
 	   blynk.virtualWrite(16, 'Heater On');
 	}
-	else if (tf(equip4 == 'false')) {
+	else if (tf(equip4 == "false")) {
 	  // blynk.virtualWrite(11, 0);
 	   blynk.virtualWrite(15, 'Heater Off');
 	}
