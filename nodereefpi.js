@@ -5,6 +5,10 @@ var tf = require('string-includes');
 var request = require('request');
 var AUTH = '559888bce2724c079b9d617cffbd8518';
 var blynk = new Blynk.Blynk(AUTH);
+// added this here to test
+blynk.on('error', (err) => {
+  console.error('whoops! there was an error');
+});
 var v10 = new blynk.VirtualPin(10);
 //this is used to monitor the listed equipment  ie below url: shows equipment/1' is for equipment 1
 var equipment1opt = {
