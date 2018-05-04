@@ -135,7 +135,7 @@ function tempcall(error, response, tempbody) {
        var begin = tempbody.length - 8;
         var end = tempbody.length - 5;      //changed from 3 to 5 to get rid of decimal point for now
 	var currtemp = tempbody.slice(begin, end);
-	var currtemp = parseFloat(currtemp) + .01;
+	var currtemp = parseFloat(currtemp);
 	blynk.virtualWrite(12, currtemp);
     }
 }
