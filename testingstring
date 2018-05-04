@@ -13,7 +13,7 @@ var options = {
 function callback(error, response, body) {
     if (!error && response.statusCode == 200) {
         console.log(body);
-    if (tf(body, 'true)) {
+    if (tf(body, 'true')) {
         console.log("it is on at the moment);
         }
     if (tf(body, 'false')) {
