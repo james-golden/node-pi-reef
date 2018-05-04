@@ -9,7 +9,7 @@ var c = 'this';
 //});
  
 // promise
-writeFile('foo.txt', a, b, c)
+writeFile('foo.txt', 'a, b, c')
   .then(function() {
     // do stuff
   });
