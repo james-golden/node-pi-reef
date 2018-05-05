@@ -1,7 +1,13 @@
-var x = 5;
-var y = 15;
-var addX = function(value) {
-  return value + x;
+var equipment1opt = {
+    url: 'http://127.0.0.1:80/api/equipments/2',
+    auth: {
+        'user': 'reef-pi',
+        'pass': 'reef-pi'
+    }
 };
-module.exports.x = x;
-module.exports.addX = addX;
+
+
+
+
+module.exports.equipment1opt = equipment1opt;
+
