@@ -1,5 +1,5 @@
 
-
+var misc = require('./misc');
 var Blynk = require('blynk-library');
 var tf = require('string-includes');
 var request = require('request');
