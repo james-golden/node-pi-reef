@@ -6,10 +6,10 @@ var request = require('request');
 var AUTH = '559888bce2724c079b9d617cffbd8518';
 var blynk = new Blynk.Blynk(AUTH);
 // added this here to test
-blynk.on('error', (err) => {
-  console.error('whoops! there was an error');
-});
-var v10 = new blynk.VirtualPin(10);
+//blynk.on('error', (err) => {
+//  console.error('whoops! there was an error');
+//});
+//var v10 = new blynk.VirtualPin(10);
 //this is used to monitor the listed equipment  ie below url: shows equipment/1' is for equipment 1
 //var equipment1opt = {
 //    url: 'http://127.0.0.1:80/api/equipments/2',
@@ -143,6 +143,10 @@ function tempcall(error, response, tempbody) {
 // end temp monitor
 var testomg = setInterval(
 function() {
+	blynk.on('error', (err) => {
+  console.error('whoops! there was an error');
+});
+	
 //this  calls the items above to work
 	request(tempature, tempcall);
 	request(misc.equipment1opt, equipment1call);
