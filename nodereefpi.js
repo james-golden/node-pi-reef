@@ -11,13 +11,13 @@ blynk.on('error', (err) => {
 });
 var v10 = new blynk.VirtualPin(10);
 //this is used to monitor the listed equipment  ie below url: shows equipment/1' is for equipment 1
-var equipment1opt = {
-    url: 'http://127.0.0.1:80/api/equipments/2',
-    auth: {
-        'user': 'reef-pi',
-        'pass': 'reef-pi'
-    }
-};
+//var equipment1opt = {
+//    url: 'http://127.0.0.1:80/api/equipments/2',
+//    auth: {
+//        'user': 'reef-pi',
+//        'pass': 'reef-pi'
+//    }
+//};
 
 function equipment1call(error, response, equip1) {
     if (!error && response.statusCode == 200) {
@@ -145,7 +145,7 @@ var testomg = setInterval(
 function() {
 //this  calls the items above to work
 	request(tempature, tempcall);
-	request(equipment1opt, equipment1call);
+	request(misc.equipment1opt, equipment1call);
 	request(equip2opt, equip2call)
 	request(equip3opt, equip3call)
 	request(equip4opt, equip4call).end();
