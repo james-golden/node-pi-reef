@@ -1,5 +1,5 @@
 var equipment1opt = {
-    url: 'http://127.0.0.1:80/api/equipments/2',
+    url: 'http://127.0.0.1:80/api/equipments/1',
     auth: {
         'user': 'reef-pi',
         'pass': 'reef-pi'
