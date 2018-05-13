@@ -43,7 +43,7 @@ function equipment1call(error, response, equip1) {
 
 // begin equipment 2
 var equip2opt = {
-	url: 'http://127.0.0.1:80/api/equipments/3',
+	url: 'http://127.0.0.1:80/api/equipments/2',
 	auth: {
 		'user': 'reef-pi',
 		'pass': 'reef-pi'
@@ -70,7 +70,7 @@ function equip2call(error, response, equip2) {
 // begin equipment 3
 
 var equip3opt = {
-	url: 'http://127.0.0.1:80/api/equipments/4',
+	url: 'http://127.0.0.1:80/api/equipments/3',
 	auth: {
 		'user': 'reef-pi',
 		'pass': 'reef-pi'
@@ -97,7 +97,7 @@ function equip3call(error, response, equip3) {
 // begin of equipment 4
 
 var equip4opt = {
-	url: 'http://127.0.0.1:80/api/equipments/5',
+	url: 'http://127.0.0.1:80/api/equipments/4',
 	auth: {
 		'user': 'reef-pi',
 		'pass': 'reef-pi'
