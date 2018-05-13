@@ -140,11 +140,11 @@ function tempcall(error, response, tempbody) {
     }
 }
 
-function blynkfault(error) {
-		blynk.on('error', (err) => {
-  console.error('whoops! there was an error');
-});
-}
+//function blynkfault(error) {
+//		blynk.on('error', (err) => {
+//  console.error('whoops! there was an error');
+//});
+//}
 
 // end temp monitor
 var testomg = setInterval(
@@ -154,7 +154,7 @@ function() {
 //});
 	
 //this  calls the items above to work
-	request(blynkfault);
+//	request(blynkfault);
 	request(tempature, tempcall);
 	request(misc.equipment1opt, equipment1call);
 	request(equip2opt, equip2call)
