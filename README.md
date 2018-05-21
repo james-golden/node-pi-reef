@@ -8,5 +8,6 @@ something else i found that worked well with running the node.js scripts is some
 Some of the node modules you will need are 
 1. request
 2. string-includes
+3. blynk-libarary
 
 this will let you know if you have the system installed correctly.
